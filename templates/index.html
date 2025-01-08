@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../static/styles.css ">
+    <title>Heart Disease Prediction</title>
+</head>
+<body>
+    <div class="container">
+        <img src="../static/cartoon_heart.png" alt="Heart Image" class="heart-img">
+        <h1 class="title">Heart Disease Prediction</h1>
+        <form action="/predict" method="post" class="form">
+            <label for="age">Age:</label>
+            <input type="number" name="age" required>
+
+            <label for="sex">Sex (1 = Male, 0 = Female):</label>
+            <input type="number" name="sex" required>
+
+            <label for="cp">Chest Pain Type (0-3):</label>
+            <input type="number" name="cp" required>
+
+            <label for="bp">Blood Pressure:</label>
+            <input type="number" name="bp" required>
+
+            <label for="cholesterol">Cholesterol:</label>
+            <input type="number" name="cholesterol" required>
+
+            <label for="fbs">FBS over 120 (1 = True, 0 = False):</label>
+            <input type="number" name="fbs" required>
+
+            <label for="ekg">EKG Results (0-2):</label>
+            <input type="number" name="ekg" required>
+
+            <label for="max_hr">Max Heart Rate:</label>
+            <input type="number" name="max_hr" required>
+
+            <label for="exercise_angina">Exercise Angina (1 = Yes, 0 = No):</label>
+            <input type="number" name="exercise_angina" required>
+
+            <label for="st_depression">ST Depression:</label>
+            <input type="number" step="0.1" name="st_depression" required>
+
+            <label for="slope_st">Slope of ST (0-2):</label>
+            <input type="number" name="slope_st" required>
+
+            <label for="vessels_fluro">Number of Vessels Fluro (0-3):</label>
+            <input type="number" name="vessels_fluro" required>
+
+            <label for="thallium">Thallium (1 = Normal, 0 = Abnormal):</label>
+            <input type="number" name="thallium" required>
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>

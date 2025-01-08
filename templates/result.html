@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css ">
+    <title>Prediction Result</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <h2>Prediction: {{ result }}</h2>
+
+        <h3>Model Accuracy</h3>
+        <p>Train Accuracy: {{ train_accuracy | round(2) }}%</p>
+        <p>Test Accuracy: {{ test_accuracy | round(2) }}%</p>
+        
+        <!-- Optional: Simple representation of accuracy as bars -->
+        <div class="accuracy-bar">
+            <div class="bar" style="width: {{ train_accuracy | round(2) }}%; background-color: rgba(75, 192, 192, 0.5);">
+                Train: {{ train_accuracy | round(2) }}%
+            </div>
+            <div class="bar" style="width: {{ test_accuracy | round(2) }}%; background-color: rgba(153, 102, 255, 0.5);">
+                Test: {{ test_accuracy | round(2) }}%
+            </div>
+        </div>
+        
+        <a href="/">Back to Prediction Form</a>
+    </div>
+</body>
+</html>
